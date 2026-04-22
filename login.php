@@ -61,9 +61,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="login-page">
   <div class="login-card">
 
-    <div class="login-logo" style="font-size:1.1rem;font-weight:800;letter-spacing:1px;">ZL</div>
-    <div class="login-title">Zahra Laundry</div>
-    <div class="login-sub">Sistem Manajemen Laundry</div>
+    <div style="text-align:center;margin-bottom:26px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="width:3px;height:52px;background:#7c3aed;border-radius:2px;"></div>
+        <div style="display:flex;flex-direction:column;text-align:left;">
+          <span style="font-size:2rem;font-weight:800;color:#1e1b4b;letter-spacing:-0.5px;line-height:1;">ZAHRA</span>
+          <span style="font-size:2rem;font-weight:300;color:#7c3aed;letter-spacing:1px;line-height:1;">LAUNDRY</span>
+        </div>
+      </div>
+      <div style="font-size:0.68rem;font-weight:500;color:#a78bfa;letter-spacing:4px;text-transform:uppercase;">Sistem Manajemen Laundry</div>
+    </div>
 
     <?php if ($error): ?>
     <div class="alert alert-danger" data-auto>
