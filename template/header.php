@@ -1,5 +1,4 @@
 <?php
-
 if (session_status() === PHP_SESSION_NONE) session_start();
 
 if (!isset($_SESSION['id_user'])) {
@@ -36,6 +35,9 @@ if (!in_array($halaman, $boleh)) {
   <link href="<?= BASE_URL ?>assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+
+<div id="sidebar-overlay"></div>
+
 <div style="display:flex;min-height:100vh;">
 
   <?php include BASE_URL . 'template/sidebar.php'; ?>
@@ -43,10 +45,17 @@ if (!in_array($halaman, $boleh)) {
   <div id="main-content">
 
     <div id="topbar">
-      <div class="topbar-title"><?= htmlspecialchars($page_title) ?></div>
+      <div class="topbar-left">
+        <button id="btn-toggle" title="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="topbar-title"><?= htmlspecialchars($page_title) ?></div>
+      </div>
       <div class="topbar-right">
         <div class="user-pill">
-          <?= htmlspecialchars($nama_user) ?>
+          <span class="user-name"><?= htmlspecialchars($nama_user) ?></span>
           <span style="opacity:.6;font-weight:400;">(<?= ucfirst($role) ?>)</span>
         </div>
         <a href="<?= BASE_URL ?>logout.php" class="btn-logout">Keluar</a>
