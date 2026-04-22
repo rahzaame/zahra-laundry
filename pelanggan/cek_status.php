@@ -52,17 +52,7 @@ function getStepIndex($status) {
     }
 
     .brand { text-align: center; color: #fff; margin-bottom: 28px; }
-    .brand-logo {
-      width: 56px; height: 56px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 14px;
-      border: 1px solid rgba(255,255,255,0.2);
-      font-size: 1.1rem; font-weight: 800; color: #fff; letter-spacing: 1px;
-    }
-    .brand h1 { font-size: 1.4rem; font-weight: 800; }
-    .brand p  { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+    .brand p  { font-size: 0.82rem; opacity: 0.6; margin-top: 8px; letter-spacing: 1px; }
 
     .card {
       background: #fff;
@@ -190,8 +180,13 @@ function getStepIndex($status) {
 <body>
 
 <div class="brand">
-  <div class="brand-logo">ZL</div>
-  <h1>Zahra Laundry</h1>
+  <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:10px;">
+    <div style="width:3px;height:52px;background:#a78bfa;border-radius:2px;"></div>
+    <div style="display:flex;flex-direction:column;text-align:left;">
+      <span style="font-size:1.9rem;font-weight:800;color:#ffffff;letter-spacing:-0.5px;line-height:1;">ZAHRA</span>
+      <span style="font-size:1.9rem;font-weight:300;color:#c4b5fd;letter-spacing:1px;line-height:1;">LAUNDRY</span>
+    </div>
+  </div>
   <p>Cek status pesanan laundry Anda</p>
 </div>
 
